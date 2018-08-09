@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>JsonFileCreator</h1>
+    <p class="lead">Json sample according to my requirement</p>
+    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>Upload Excel File to DataBase for Creating JsonFile</h2>
+        <div class="modal-body">
+            @using (Html.BeginForm("CreateJsonArray", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class=" well">
+                            <form class="form form-inline">
+                                <div class="form-group">
+                                    <label class="text-info">Upload Excel File</label>
+                                    <input type="file" name="file" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" value="Submit" class="btn btn-info" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+        <h1>Json Creator</h1>
+        <p></p>
+        @Html.ActionLink("Ckick me to Generate JsonFile","JsonCreator","Home")
+        <</div>
+    </div>
+
+</div>
